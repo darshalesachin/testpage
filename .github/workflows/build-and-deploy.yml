@@ -28,7 +28,7 @@ jobs:
         npm run build
         
     - name: Download a Build Artifact
-    uses: actions/download-artifact@v3.0.1
-    with:
-      name: /dist
-      path: /dist
+      uses: actions/download-artifact@v3.0.1
+      with:
+        name: /dist
+        path: /dist
