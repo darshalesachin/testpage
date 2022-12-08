@@ -27,10 +27,8 @@ jobs:
         npm install
         npm run build
         
-    - name: Archive artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: dist-without-markdown
-        path: |
-          dist
-          !dist/**/*.md
+    - name: Download a Build Artifact
+    uses: actions/download-artifact@v3.0.1
+    with:
+      name: /dist
+      path: /dist
